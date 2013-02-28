@@ -6,6 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
+gem 'thumbs_up'
 
 group :production do
 	gem 'pg'

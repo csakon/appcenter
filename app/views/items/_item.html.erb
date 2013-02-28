@@ -1,5 +1,13 @@
 <div class="box">
 	<%= link_to (image_tag item.image.url(:medium)), item %>
+  
+  
+    <p>
+      <%= link_to('+1', vote_up_item_path(item), :method => :post)  %>
+      
+    </p>
+
+
   <p class="description">
   	<%= item.description %>
   </p>

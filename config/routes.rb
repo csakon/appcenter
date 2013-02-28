@@ -1,7 +1,6 @@
 Appcenter::Application.routes.draw do
   resources :items
 
-
   devise_for :users
 
   get 'about' => 'pages#about'
@@ -9,6 +8,14 @@ Appcenter::Application.routes.draw do
   get 'home' => 'pages#home'
 
   root :to => 'items#index'
+
+  
+  resources :items do
+    member do
+      post :vote_up
+    end
+  end
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
