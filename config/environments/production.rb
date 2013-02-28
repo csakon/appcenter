@@ -67,4 +67,14 @@ Appcenter::Application.configure do
 
   # Devise - In production, :host should be set to the actual host of your application
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # AWS S3
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['appcenter'],
+    :access_key_id => ENV['0XKBQ85Y6FBXQSZPC9G2'],
+    :secret_access_key => ENV['s3XSgdUoQLmcGsQG/jcBbTO14bZZnKKHQVFL+K0g']
+  }
+}
 end
