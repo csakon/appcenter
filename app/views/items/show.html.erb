@@ -5,11 +5,15 @@
 			<%= image_tag @item.image %>
 			
 			<p>	
-  			<%= @item.description %>
+  				<%= @item.description %>
+			</p>
+
+			<p>
+				<%= @item.votes_for %>
 			</p>
 
 			<p>	
-  			<%= @item.user.name %>
+  				<%= @item.user.name %>
 			</p>
 
 			<% if current_user == @item.user %>

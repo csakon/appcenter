@@ -4,7 +4,8 @@
   
     <p>
       <%= link_to('+1', vote_up_item_path(item), :method => :post)  %>
-      
+       | 
+      <%= item.votes_for %>
     </p>
 
 
