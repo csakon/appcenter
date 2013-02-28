@@ -1,0 +1,9 @@
+<% unless user_signed_in? %>
+	<div class="hero-unit">
+	  <h1>Welcome to AppCenter</h1>
+	  <p>A Rails App to create marketplaces that distribute digital stuff</p>
+	  <p>
+	      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-large" %>
+	  </p>
+	</div>
+<% end %>
