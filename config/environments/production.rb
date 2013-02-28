@@ -72,9 +72,9 @@ Appcenter::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['appcenter'],
-    :access_key_id => ENV['0XKBQ85Y6FBXQSZPC9G2'],
-    :secret_access_key => ENV['s3XSgdUoQLmcGsQG/jcBbTO14bZZnKKHQVFL+K0g']
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 end
