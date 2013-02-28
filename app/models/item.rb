@@ -8,15 +8,8 @@ class Item < ActiveRecord::Base
   							   size: { less_than: 5.megabytes }
 
   belongs_to :user
-  
-  has_attached_file :image, 
-  	:storage => :s3,
-  	:s3_credentials => {
-    	:bucket => ENV['AWS_BUCKET'],
-    	:access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    	:secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-  	},
-  	styles: { medium: "300x300>"}
+
+  has_attached_file :image, styles: { medium: "300x300>"}
 
 
 end
